@@ -5,15 +5,33 @@
 
 .header-top {
   background: #f5fafe;
-  padding: 21px 0;
+  @include adaptiveValue("padding-top", 21, 12);
+  @include adaptiveValue("padding-bottom", 21, 12);
+
+  @media (max-width: $mobile) {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    background: transparent;
+    path {
+      fill: #fff;
+    }
+  }
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     font-size: rem(10);
     line-height: percent(13, 10);
+
+    @media (max-width: $mobile) {
+      // justify-content: center;
+      gap: 10px;
+      @include adaptiveValue("font-size", 16, 12, 767);
+    }
   }
 
   &__info {
@@ -27,6 +45,9 @@
     display: flex;
     align-items: center;
     gap: 100px;
+    @media (max-width: $mobile) {
+      gap: 20px;
+    }
   }
 
   &__item {
@@ -61,7 +82,9 @@
 }
 
 .header-medium {
-  padding: 40px 0;
+  // padding: 20px 0;
+  @include adaptiveValue("padding-top", 40, 10);
+  @include adaptiveValue("padding-bottom", 40, 10);
   &__inner {
     display: flex;
     align-items: center;
@@ -82,7 +105,7 @@
   &__end {
     display: flex;
     align-items: center;
-    gap: 53px;
+    @include adaptiveValue("gap", 53, 16);
   }
 
   &__cart {
@@ -91,13 +114,13 @@
   &__user {
     display: flex;
     align-items: center;
-    gap: 18px;
+    @include adaptiveValue("gap", 18, 10);
   }
 }
 
 .logo {
   font-family: "Luckiest Guy";
-  font-size: rem(24);
+  @include adaptiveValue("font-size", 24, 18);
   line-height: percent(24, 24);
 
   span {
@@ -219,6 +242,10 @@
   &__name {
     font-size: rem(14);
     line-height: percent(18, 14);
+
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
 
   &__arrow-down {
@@ -231,10 +258,55 @@
 }
 
 .header-bottom {
-  padding: 31px 0;
+  @include adaptiveValue("padding-top", 31, 15, $containerWidth, 760);
+  @include adaptiveValue("padding-bottom", 31, 15, $containerWidth, 760);
   background-color: #0a223d;
   color: #fff;
-  &__nav {
+
+  @media (max-width: $mobile) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(120%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+
+    &.menu-open {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+
+    .header__container {
+      width: inherit;
+      height: inherit;
+    }
+
+    &__inner {
+      width: inherit;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+      padding: 50px 0 20px;
+      overflow: auto;
+    }
+
+    &__nav {
+      margin-bottom: 20px;
+    }
+    .search-form {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      @include adaptiveValue("max-width", 350, 290, 768);
+      // margin: 0 auto;
+    }
+
+    .header-medium__cart {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -242,9 +314,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: $mobile) {
+    height: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    @include adaptiveValue("font-size", 14, 20, 767);
+  }
   &__item {
     font-weight: 700;
-    font-size: rem(14);
+    @include adaptiveValue("font-size", 14, 12, $containerWidth, 768);
     line-height: percent(18, 14);
     text-transform: uppercase;
 
@@ -267,7 +348,7 @@
 
 .icon-menu {
   display: none;
-  @media (max-width: 1024px) {
+  @media (max-width: $mobile) {
     display: block;
     position: relative;
     width: rem(30);
