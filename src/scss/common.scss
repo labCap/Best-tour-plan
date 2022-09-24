@@ -1,19 +1,50 @@
 // Заголовки, общие БЄМ блоки и проче...
-.section {
-  @include adaptiveValue("margin-bottom", 126, 45);
 
-  &__title {
-    margin-bottom: 40px;
-    position: relative;
+.btn {
+  padding: 10px 25px;
+  background: #ec1f46;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: percent(19, 14);
+}
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 1px;
-      width: 100%;
-      background-color: #fff;
+.form {
+  &__input {
+    background: #ffffff;
+    border-radius: 4px;
+    height: 50px;
+    padding: 18px 23px;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: rem(12);
+      line-height: percent(15, 12);
+      color: #bdbdbd;
     }
+  }
+
+  &__textarea {
+    padding: 18px 23px;
+    background: #ffffff;
+    border-radius: 4px;
+    resize: vertical;
+    &::placeholder {
+      font-weight: 400;
+      font-size: rem(12);
+      line-height: percent(15, 12);
+      color: #bdbdbd;
+    }
+  }
+
+  &__info {
+    font-weight: 700;
+    font-size: rem(12);
+    line-height: percent(15, 12);
+    color: #bdbdbd;
+  }
+
+  &__btn {
   }
 }
