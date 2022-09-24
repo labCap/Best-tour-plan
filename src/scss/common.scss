@@ -8,6 +8,26 @@
   font-weight: 600;
   font-size: rem(14);
   line-height: percent(19, 14);
+
+  transition: all 0.3s ease-in-out;
+
+  border: 1px solid #ec1f46;
+
+  @media (min-width: $mobile) {
+    &:hover {
+      color: #ec1f46;
+      background: #f5fafe;
+    }
+  }
+
+  &:focus {
+    color: #ec1f46;
+    background: #f5fafe;
+  }
+
+  &:active {
+    background: darken($color: #fff, $amount: 20%);
+  }
 }
 
 .form {
@@ -15,7 +35,9 @@
     background: #ffffff;
     border-radius: 4px;
     height: 50px;
-    padding: 18px 23px;
+    padding: 17px 22px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
 
     &::placeholder {
       font-weight: 400;
@@ -23,18 +45,41 @@
       line-height: percent(15, 12);
       color: #bdbdbd;
     }
+
+    @media (min-width: $mobile) {
+      &:hover {
+        border: 1px solid #ec1f46;
+      }
+    }
+
+    &:focus {
+      border: 1px solid #ec1f46;
+    }
   }
 
   &__textarea {
-    padding: 18px 23px;
     background: #ffffff;
     border-radius: 4px;
     resize: vertical;
+    padding: 17px 22px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+
     &::placeholder {
       font-weight: 400;
       font-size: rem(12);
       line-height: percent(15, 12);
       color: #bdbdbd;
+    }
+
+    @media (min-width: $mobile) {
+      &:hover {
+        border: 1px solid #ec1f46;
+      }
+    }
+
+    &:focus {
+      border: 1px solid #ec1f46;
     }
   }
 
@@ -46,5 +91,11 @@
   }
 
   &__btn {
+    font-weight: 700;
+    font-size: rem(12);
+    line-height: percent(15, 12);
+    color: #fff;
+    padding-right: 65px;
+    padding-left: 65px;
   }
 }
