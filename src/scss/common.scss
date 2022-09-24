@@ -11,7 +11,7 @@
 
   transition: all 0.3s ease-in-out;
 
-  border: 1px solid #ec1f46;
+  border: 2px solid #ec1f46;
 
   @media (min-width: $mobile) {
     &:hover {
@@ -36,7 +36,7 @@
     border-radius: 4px;
     height: 50px;
     padding: 17px 22px;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     transition: all 0.3s ease-in-out;
 
     &::placeholder {
@@ -48,12 +48,12 @@
 
     @media (min-width: $mobile) {
       &:hover {
-        border: 1px solid #ec1f46;
+        border: 2px solid #ec1f46;
       }
     }
 
     &:focus {
-      border: 1px solid #ec1f46;
+      border: 2px solid #ec1f46;
     }
   }
 
@@ -62,7 +62,7 @@
     border-radius: 4px;
     resize: vertical;
     padding: 17px 22px;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     transition: all 0.3s ease-in-out;
 
     &::placeholder {
@@ -74,12 +74,12 @@
 
     @media (min-width: $mobile) {
       &:hover {
-        border: 1px solid #ec1f46;
+        border: 2px solid #ec1f46;
       }
     }
 
     &:focus {
-      border: 1px solid #ec1f46;
+      border: 2px solid #ec1f46;
     }
   }
 
@@ -95,7 +95,6 @@
     font-size: rem(12);
     line-height: percent(15, 12);
     color: #fff;
-    padding-right: 65px;
-    padding-left: 65px;
+    padding: 18px 65px;
   }
 }
