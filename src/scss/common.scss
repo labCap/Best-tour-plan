@@ -1,0 +1,19 @@
+// Заголовки, общие БЄМ блоки и проче...
+.section {
+  @include adaptiveValue("margin-bottom", 126, 45);
+
+  &__title {
+    margin-bottom: 40px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 1px;
+      width: 100%;
+      background-color: #fff;
+    }
+  }
+}
