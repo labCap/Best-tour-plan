@@ -41,4 +41,39 @@ $(document).ready(function () {
 
     $(this).toggleClass("active").next().slideToggle(300);
   });
+
+  $(".intro-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: ".intro__slider-prev",
+    nextArrow: ".intro__slider-next",
+    // responsive: [
+    //   {
+    //     breakpoint: 1780,
+    //     settings: {
+    //       slidesToShow: 4,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 1350,
+    //     settings: {
+    //       slidesToShow: 3,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 960,
+    //     settings: {
+    //       slidesToShow: 2,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 620,
+    //     settings: {
+    //       slidesToShow: 1,
+    //     },
+    //   },
+    // ],
+  });
 });
