@@ -4,7 +4,7 @@
   margin-bottom: 65px;
   &__title1 {
     font-weight: 700;
-    font-size: rem(24);
+    @include adaptiveValue("font-size", 24, 16);
     line-height: percent(30, 24);
     text-transform: uppercase;
     color: #333333;
@@ -124,4 +124,25 @@
     color: #fff;
     padding: 18px 65px;
   }
+}
+
+.slider-btns {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  padding: 0 26px;
+}
+.slider-prev {
+  transform: rotate(90deg);
+}
+.slider-next {
+  transform: rotate(-90deg);
 }
