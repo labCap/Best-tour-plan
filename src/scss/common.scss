@@ -1,5 +1,31 @@
 // Заголовки, общие БЄМ блоки и проче...
 
+.section {
+  &__title1 {
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: percent(30, 24);
+    text-transform: uppercase;
+    color: #333333;
+    display: inline-block;
+  }
+}
+
+.info-mark {
+  background: #ec1f46;
+  border-radius: 3px;
+
+  color: #fff;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.star {
+}
+
 .btn {
   padding: 10px 25px;
   background: #ec1f46;
