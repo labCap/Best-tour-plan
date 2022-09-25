@@ -10,6 +10,28 @@ burger.addEventListener("click", () => {
   document.body.classList.toggle("_lock");
 });
 
+const tabTitle = document.querySelectorAll(".tabs__title");
+const tab = document.querySelectorAll(".tabs__body");
+
+tabTitle.forEach((i) => {
+  i.addEventListener("click", () => {
+    let thisTabTitle = i;
+    let tabId = thisTabTitle.getAttribute("data-tab");
+    let thisTab = document.querySelector(tabId);
+
+    tabTitle.forEach((j) => {
+      j.classList.remove("active");
+    });
+
+    tab.forEach((j) => {
+      j.classList.remove("active");
+    });
+
+    thisTabTitle.classList.add("active");
+    thisTab.classList.add("active");
+  });
+});
+
 $(document).ready(function () {
   $(".spoiler-title").click(function (event) {
     if ($(".footer-top").hasClass("one")) {
