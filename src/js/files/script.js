@@ -1,6 +1,8 @@
 // Подключение функционала "Чертогов Фрилансера"
 // Подключение списка активных модулей
 
+// import Swiper from "swiper";
+
 const burger = document.querySelector(".icon-menu");
 const burgerMenu = document.querySelector(".header-bottom");
 
@@ -49,31 +51,54 @@ $(document).ready(function () {
     arrows: true,
     prevArrow: ".intro__slider-prev",
     nextArrow: ".intro__slider-next",
-    // responsive: [
-    //   {
-    //     breakpoint: 1780,
-    //     settings: {
-    //       slidesToShow: 4,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 1350,
-    //     settings: {
-    //       slidesToShow: 3,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 960,
-    //     settings: {
-    //       slidesToShow: 2,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 620,
-    //     settings: {
-    //       slidesToShow: 1,
-    //     },
-    //   },
-    // ],
+  });
+
+  $(".about__slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: ".about__slider-prev",
+    nextArrow: ".about__slider-next",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          dots: true,
+        },
+      },
+    ],
   });
 });
+
+// new Swiper(".about__slider", {
+//   direction: "horizontal",
+//   slidesPerView: 2,
+//   // slidesPerColumn: 2,
+//   // breakpoints: {
+//   //   1400: {
+//   //     slidesPerView: 2,
+//   //   },
+//   //   1024: {
+//   //     slidesPerView: 1,
+//   //   },
+//   //   768: {
+//   //     slidesPerView: 1,
+//   //   },
+//   //   425: {
+//   //     slidesPerView: 1,
+//   //   },
+//   //   375: {
+//   //     slidesPerView: 1,
+//   //   },
+//   //   320: {
+//   //     slidesPerView: 1,
+//   //   },
+//   // },
+
+//   // navigation: {
+//   //   prevEl: ".swiper-button-prev",
+//   //   nextEl: ".swiper-button-next",
+//   // },
+// });
