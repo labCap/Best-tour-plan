@@ -5,8 +5,8 @@
 
   &__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 45px;
+    @include adaptiveValue("font-size", 36, 25);
+    line-height: percent(45, 36);
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 65px;

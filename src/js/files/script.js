@@ -5,11 +5,17 @@
 
 const burger = document.querySelector(".icon-menu");
 const burgerMenu = document.querySelector(".header-bottom");
+const btnOpenDropDown = document.querySelector(".user__arrow-down");
+const dropDownMenu = document.querySelector(".header-medium__drop-down");
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("menu-open");
   burgerMenu.classList.toggle("menu-open");
   document.body.classList.toggle("_lock");
+});
+btnOpenDropDown.addEventListener("click", () => {
+  btnOpenDropDown.classList.toggle("open");
+  dropDownMenu.classList.toggle("open");
 });
 
 const tabTitle = document.querySelectorAll(".tabs__title");
