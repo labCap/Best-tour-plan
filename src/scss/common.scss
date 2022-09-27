@@ -57,10 +57,10 @@
     }
   }
 
-  &:focus {
-    color: #ec1f46;
-    background: #f5fafe;
-  }
+  // &:focus {
+  //   color: #ec1f46;
+  //   background: #f5fafe;
+  // }
 
   &:active {
     background: darken($color: #fff, $amount: 20%);
@@ -85,12 +85,21 @@
 
     @media (min-width: $mobile) {
       &:hover {
-        border: 2px solid #ec1f46;
+        border: 2px solid #919090;
       }
     }
 
     &:focus {
-      border: 2px solid #ec1f46;
+      border: 2px solid #919090;
+    }
+
+    &.invalid {
+      color: #ec1f46;
+      border-color: #ec1f46;
+    }
+
+    &.success {
+      border-color: #6aec1f;
     }
   }
 
@@ -111,12 +120,12 @@
 
     @media (min-width: $mobile) {
       &:hover {
-        border: 2px solid #ec1f46;
+        border: 2px solid #919090;
       }
     }
 
     &:focus {
-      border: 2px solid #ec1f46;
+      border: 2px solid #919090;
     }
   }
 

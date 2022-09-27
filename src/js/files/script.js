@@ -89,42 +89,68 @@ $(document).ready(function () {
     ],
   });
 
-  let userPhone = $("#user-phone");
+  let userPhone = $("#footer-form-phone");
 
-  userPhone.mask("(999) 999-9999");
+  userPhone.mask("+(999) 999-9999");
 
   $(".footer__form").submit(function (e) {
     e.preventDefault();
-    let userName = $("#user-name"),
-      userEmail = $("#user-email"),
-      userPhone = $("#user-phone"),
-      userMessage = $("#user-message");
+    let userName = $("#footer-form-name"),
+      // userEmail = $("#user-email"),
+      userPhone = $("#footer-form-phone");
+    // userMessage = $("#user-message");
 
-    console.log(userMessage.val().length);
+    // console.log(userMessage.val().length);
 
     if (userName.val().length < 2) {
       userName.addClass("invalid");
       return false;
-    } else userName.removeClass("invalid");
+    } else {
+      userName.removeClass("invalid");
+      userName.addClass("success");
+    }
+
+    // if (userEmail.val().length < 7) {
+    //   userEmail.addClass("invalid");
+    //   return false;
+    // } else userEmail.removeClass("invalid");
+    if (userPhone.val().length < 7) {
+      userPhone.addClass("invalid");
+      return false;
+    } else {
+      userPhone.removeClass("invalid");
+      userPhone.addClass("success");
+    }
+    // if (userMessage.val().length < 7) {
+    //   userMessage.addClass("invalid");
+    //   return false;
+    // } else userMessage.removeClass("invalid");
+
+    // $("#thanks-contact h3").text(`Thank you, ${userName.val()}`);
+    // $("#thanks-contact .content").text(`Your message: ${userMessage.val()}`);
+
+    // $("#contact-btn").attr("data-popup", "#thanks-contact");
+
+    // $("#contact-btn").click();
+  });
+
+  $(".newsletter__form").submit(function (e) {
+    e.preventDefault();
+    let userEmail = $("#newsletter-form-email");
 
     if (userEmail.val().length < 7) {
       userEmail.addClass("invalid");
       return false;
-    } else userEmail.removeClass("invalid");
-    if (userPhone.val().length < 7) {
-      userPhone.addClass("invalid");
-      return false;
-    } else userPhone.removeClass("invalid");
-    if (userMessage.val().length < 7) {
-      userMessage.addClass("invalid");
-      return false;
-    } else userMessage.removeClass("invalid");
+    } else {
+      userEmail.removeClass("invalid");
+      userEmail.addClass("success");
+    }
 
-    $("#thanks-contact h3").text(`Thank you, ${userName.val()}`);
-    $("#thanks-contact .content").text(`Your message: ${userMessage.val()}`);
+    // $("#thanks-contact h3").text(`Thank you, ${userName.val()}`);
+    // $("#thanks-contact .content").text(`Your message: ${userMessage.val()}`);
 
-    $("#contact-btn").attr("data-popup", "#thanks-contact");
+    // $("#contact-btn").attr("data-popup", "#thanks-contact");
 
-    $("#contact-btn").click();
+    // $("#contact-btn").click();
   });
 });
