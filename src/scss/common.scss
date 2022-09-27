@@ -2,6 +2,16 @@
 
 .section {
   margin-bottom: 65px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 65px;
+  }
+
   &__title1 {
     font-weight: 700;
     @include adaptiveValue("font-size", 24, 16);
