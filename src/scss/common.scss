@@ -127,6 +127,15 @@
     &:focus {
       border: 2px solid #919090;
     }
+
+    &.invalid {
+      color: #ec1f46;
+      border-color: #ec1f46;
+    }
+
+    &.success {
+      border-color: #6aec1f;
+    }
   }
 
   &__info {

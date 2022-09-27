@@ -96,13 +96,11 @@ $(document).ready(function () {
   $(".footer__form").submit(function (e) {
     e.preventDefault();
     let userName = $("#footer-form-name"),
-      // userEmail = $("#user-email"),
-      userPhone = $("#footer-form-phone");
-    // userMessage = $("#user-message");
-
-    // console.log(userMessage.val().length);
+      userPhone = $("#footer-form-phone"),
+      userMessage = $("#footer-form-mess");
 
     if (userName.val().length < 2) {
+      userName.removeClass("success");
       userName.addClass("invalid");
       return false;
     } else {
@@ -110,28 +108,22 @@ $(document).ready(function () {
       userName.addClass("success");
     }
 
-    // if (userEmail.val().length < 7) {
-    //   userEmail.addClass("invalid");
-    //   return false;
-    // } else userEmail.removeClass("invalid");
     if (userPhone.val().length < 7) {
+      userPhone.removeClass("success");
       userPhone.addClass("invalid");
       return false;
     } else {
       userPhone.removeClass("invalid");
       userPhone.addClass("success");
     }
-    // if (userMessage.val().length < 7) {
-    //   userMessage.addClass("invalid");
-    //   return false;
-    // } else userMessage.removeClass("invalid");
-
-    // $("#thanks-contact h3").text(`Thank you, ${userName.val()}`);
-    // $("#thanks-contact .content").text(`Your message: ${userMessage.val()}`);
-
-    // $("#contact-btn").attr("data-popup", "#thanks-contact");
-
-    // $("#contact-btn").click();
+    if (userMessage.val().length < 1) {
+      userMessage.removeClass("success");
+      userMessage.addClass("invalid");
+      return false;
+    } else {
+      userMessage.removeClass("invalid");
+      userMessage.addClass("success");
+    }
   });
 
   $(".newsletter__form").submit(function (e) {
@@ -139,6 +131,7 @@ $(document).ready(function () {
     let userEmail = $("#newsletter-form-email");
 
     if (userEmail.val().length < 7) {
+      userEmail.removeClass("success");
       userEmail.addClass("invalid");
       return false;
     } else {
