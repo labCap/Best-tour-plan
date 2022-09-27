@@ -199,21 +199,21 @@
     margin-bottom: 9px;
   }
 
-  &__price {
-    b {
-      font-weight: 800;
-      font-size: rem(24);
-      line-height: percent(33, 24);
-    }
-  }
+  // &__price {
+  //   b {
+  //     font-weight: 800;
+  //     font-size: rem(24);
+  //     line-height: percent(33, 24);
+  //   }
+  // }
 
-  &__info {
-    p {
-      &:not(:last-child) {
-        margin-bottom: 8px;
-      }
-    }
-  }
+  // &__info {
+  //   li {
+  //     &:not(:last-child) {
+  //       margin-bottom: 8px;
+  //     }
+  //   }
+  // }
 
   &__coll-center {
     font-weight: 600;

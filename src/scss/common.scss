@@ -156,3 +156,36 @@
 .slider-next {
   transform: rotate(-90deg);
 }
+
+.info-list {
+  [class*="ico"] {
+    font-size: 14px;
+    margin-right: 9px;
+  }
+  li {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.price {
+  position: relative;
+  margin-top: 20px;
+  &__discount {
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: percent(18, 14);
+    margin-bottom: 5px;
+    text-decoration-line: line-through;
+
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+  }
+  b {
+    font-weight: 800;
+    font-size: rem(24);
+    line-height: percent(33, 24);
+  }
+}
