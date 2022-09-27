@@ -71,34 +71,3 @@ $(document).ready(function () {
     ],
   });
 });
-
-// new Swiper(".about__slider", {
-//   direction: "horizontal",
-//   slidesPerView: 2,
-//   // slidesPerColumn: 2,
-//   // breakpoints: {
-//   //   1400: {
-//   //     slidesPerView: 2,
-//   //   },
-//   //   1024: {
-//   //     slidesPerView: 1,
-//   //   },
-//   //   768: {
-//   //     slidesPerView: 1,
-//   //   },
-//   //   425: {
-//   //     slidesPerView: 1,
-//   //   },
-//   //   375: {
-//   //     slidesPerView: 1,
-//   //   },
-//   //   320: {
-//   //     slidesPerView: 1,
-//   //   },
-//   // },
-
-//   // navigation: {
-//   //   prevEl: ".swiper-button-prev",
-//   //   nextEl: ".swiper-button-next",
-//   // },
-// });
