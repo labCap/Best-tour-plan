@@ -20,15 +20,6 @@
     padding-top: 45px;
   }
 
-  .slick-dots {
-    li {
-      border-color: #828282;
-      &.slick-active {
-        background-color: #828282;
-      }
-    }
-  }
-
   &__item,
   .slick-slide {
     max-width: 730px;

@@ -70,4 +70,61 @@ $(document).ready(function () {
       },
     ],
   });
+
+  $(".blog__slider").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    prevArrow: ".blog__slider-prev",
+    nextArrow: ".blog__slider-next",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  let userPhone = $("#user-phone");
+
+  userPhone.mask("(999) 999-9999");
+
+  $(".footer__form").submit(function (e) {
+    e.preventDefault();
+    let userName = $("#user-name"),
+      userEmail = $("#user-email"),
+      userPhone = $("#user-phone"),
+      userMessage = $("#user-message");
+
+    console.log(userMessage.val().length);
+
+    if (userName.val().length < 2) {
+      userName.addClass("invalid");
+      return false;
+    } else userName.removeClass("invalid");
+
+    if (userEmail.val().length < 7) {
+      userEmail.addClass("invalid");
+      return false;
+    } else userEmail.removeClass("invalid");
+    if (userPhone.val().length < 7) {
+      userPhone.addClass("invalid");
+      return false;
+    } else userPhone.removeClass("invalid");
+    if (userMessage.val().length < 7) {
+      userMessage.addClass("invalid");
+      return false;
+    } else userMessage.removeClass("invalid");
+
+    $("#thanks-contact h3").text(`Thank you, ${userName.val()}`);
+    $("#thanks-contact .content").text(`Your message: ${userMessage.val()}`);
+
+    $("#contact-btn").attr("data-popup", "#thanks-contact");
+
+    $("#contact-btn").click();
+  });
 });

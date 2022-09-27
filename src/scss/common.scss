@@ -171,11 +171,11 @@
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    border: 2px solid #000;
+    border: 2px solid #828282;
 
     transition: all 0.3s ease-in-out;
     &.slick-active {
-      background: #000;
+      background: #828282;
     }
   }
 }
